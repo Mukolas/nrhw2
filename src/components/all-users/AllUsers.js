@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './';
 import User from "./user/User";
 
 class AllUsers extends Component {
@@ -20,11 +19,11 @@ class AllUsers extends Component {
         return (
             <div>
                 {
-                  users && users.map(user=><User>)
+                  users && users.map(value=><User item={value} key={value.id}/>)
                 }
             </div>
-        );
+        )
     }
 }
 
-export default AllUsers;
+export default AllUsers
